@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               ArvoreBinaria
+version:            0.1.0.0
+build-type:         Simple
+
+executable ArvoreBinaria
+    main-is: Main.hs
+    hs-source-dirs:
+        app
+        src
+    other-modules:
+        ArvoreBinaria.Arvore
+    build-depends:
+        base >=4.14 && <5
+    default-language: Haskell2010
+
+test-suite ArvoreBinaria-test
+    type: exitcode-stdio-1.0
+    main-is: Main.hs
+    hs-source-dirs:
+        test
+        src
+    other-modules:
+        ArvoreBinaria.Arvore
+    build-depends:
+        base >=4.14 && <5,
+        tasty,
+        tasty-hunit
+    default-language: Haskell2010
